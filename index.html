@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2515/2515183.png" type="image/png">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Prime Food</h1>
+                <h1><i class="fas fa-leaf"></i> Prime Food</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home" class="active">Главная</a></li>
                     <li><a href="#recipes">Рецепты</a></li>
                     <li><a href="#products">Продукты</a></li>
+                    <li><a href="#categories">Категории</a></li>
                     <li><a href="#reminders">Напоминания</a></li>
                 </ul>
             </nav>
@@ -33,7 +35,10 @@
             <div class="hero-content">
                 <h2>Правильное питание для здоровья и красоты</h2>
                 <p>Индивидуальные рекомендации по питанию для девушек, которые заботятся о своем здоровье</p>
-                <button class="btn-primary">Начать сейчас</button>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Начать сейчас</button>
+                    <button class="btn-secondary">Узнать больше</button>
+                </div>
             </div>
         </div>
     </section>
@@ -80,6 +85,38 @@
                 <!-- Рецепты будут добавлены динамически через JavaScript -->
             </div>
             <button class="btn-secondary">Показать больше</button>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2 class="section-title">Категории продуктов</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="Фрукты">
+                    <div class="category-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3>Фрукты</h3>
+                    <p>Богаты витаминами, минералами и антиоксидантами</p>
+                    <a href="#" class="category-link">Смотреть все <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card" data-category="Овощи">
+                    <div class="category-icon"><i class="fas fa-carrot"></i></div>
+                    <h3>Овощи</h3>
+                    <p>Низкокалорийные источники клетчатки и питательных веществ</p>
+                    <a href="#" class="category-link">Смотреть все <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card" data-category="Ягоды">
+                    <div class="category-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Ягоды</h3>
+                    <p>Богаты антиоксидантами и витаминами</p>
+                    <a href="#" class="category-link">Смотреть все <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="category-card" data-category="Злаки">
+                    <div class="category-icon"><i class="fas fa-wheat-awn"></i></div>
+                    <h3>Злаки</h3>
+                    <p>Источники сложных углеводов и клетчатки</p>
+                    <a href="#" class="category-link">Смотреть все <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -150,6 +187,16 @@
         </div>
     </section>
 
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Начните свой путь к здоровому питанию сегодня</h2>
+                <p>Присоединяйтесь к нашему сообществу и получите доступ к эксклюзивным рецептам и рекомендациям</p>
+                <button class="btn-primary">Присоединиться</button>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -163,6 +210,7 @@
                         <li><a href="#home">Главная</a></li>
                         <li><a href="#recipes">Рецепты</a></li>
                         <li><a href="#products">Продукты</a></li>
+                        <li><a href="#categories">Категории</a></li>
                         <li><a href="#reminders">Напоминания</a></li>
                     </ul>
                 </div>
@@ -181,6 +229,17 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal for category products -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Категория</h2>
+            <div id="modal-products" class="modal-products-list">
+                <!-- Products will be added dynamically -->
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
