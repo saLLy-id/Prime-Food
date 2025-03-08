@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Food - Правильное питание</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Prime Food</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Главная</a></li>
+                    <li><a href="#recipes">Рецепты</a></li>
+                    <li><a href="#products">Продукты</a></li>
+                    <li><a href="#reminders">Напоминания</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <button class="btn-primary"><i class="fas fa-user"></i> Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Правильное питание для здоровья и красоты</h2>
+                <p>Индивидуальные рекомендации по питанию для девушек, которые заботятся о своем здоровье</p>
+                <button class="btn-primary">Начать сейчас</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <h2 class="section-title">Рекомендации по питанию</h2>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3>Сбалансированное питание</h3>
+                    <p>Узнайте, как правильно сочетать белки, жиры и углеводы для поддержания энергии и здоровья.</p>
+                </div>
+                <div class="recommendation-card">
+                    <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Здоровый метаболизм</h3>
+                    <p>Советы по ускорению метаболизма и поддержанию оптимального веса.</p>
+                </div>
+                <div class="recommendation-card">
+                    <div class="card-icon"><i class="fas fa-carrot"></i></div>
+                    <h3>Витамины и минералы</h3>
+                    <p>Важные питательные вещества, необходимые для красоты кожи, волос и ногтей.</p>
+                </div>
+                <div class="recommendation-card">
+                    <div class="card-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Водный баланс</h3>
+                    <p>Как правильно поддерживать гидратацию организма для здоровья и красоты.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recipes" class="recipes">
+        <div class="container">
+            <h2 class="section-title">ПП Рецепты</h2>
+            <div class="recipes-filter">
+                <button class="filter-btn active">Все</button>
+                <button class="filter-btn">Завтраки</button>
+                <button class="filter-btn">Обеды</button>
+                <button class="filter-btn">Ужины</button>
+                <button class="filter-btn">Десерты</button>
+            </div>
+            <div class="recipes-grid">
+                <!-- Рецепты будут добавлены динамически через JavaScript -->
+            </div>
+            <button class="btn-secondary">Показать больше</button>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Управление продуктами</h2>
+            <div class="products-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="favorites">Избранное</button>
+                    <button class="tab-btn" data-tab="recommended">Рекомендованное</button>
+                    <button class="tab-btn" data-tab="shopping">Что купить</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-content active" id="favorites">
+                        <div class="products-list">
+                            <!-- Избранные продукты будут добавлены динамически -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="recommended">
+                        <div class="products-list">
+                            <!-- Рекомендованные продукты будут добавлены динамически -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="shopping">
+                        <div class="products-list">
+                            <!-- Список покупок будет добавлен динамически -->
+                        </div>
+                        <div class="add-product">
+                            <input type="text" placeholder="Добавить продукт">
+                            <input type="number" placeholder="Калории (ккал)">
+                            <button class="btn-primary"><i class="fas fa-plus"></i> Добавить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reminders" class="reminders">
+        <div class="container">
+            <h2 class="section-title">Напоминания о покупках</h2>
+            <div class="reminders-container">
+                <div class="reminder-form">
+                    <h3>Создать напоминание</h3>
+                    <form id="reminder-form">
+                        <div class="form-group">
+                            <label for="reminder-product">Продукт</label>
+                            <input type="text" id="reminder-product" placeholder="Название продукта">
+                        </div>
+                        <div class="form-group">
+                            <label for="reminder-date">Дата</label>
+                            <input type="date" id="reminder-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="reminder-time">Время</label>
+                            <input type="time" id="reminder-time">
+                        </div>
+                        <button type="submit" class="btn-primary">Создать напоминание</button>
+                    </form>
+                </div>
+                <div class="reminders-list">
+                    <h3>Активные напоминания</h3>
+                    <div id="active-reminders">
+                        <!-- Напоминания будут добавлены динамически -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Prime Food</h2>
+                    <p>Ваш путеводитель в мире правильного питания</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#recipes">Рецепты</a></li>
+                        <li><a href="#products">Продукты</a></li>
+                        <li><a href="#reminders">Напоминания</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Prime Food. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
